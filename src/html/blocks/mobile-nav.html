@@ -1,0 +1,94 @@
+<div class="mobile-nav">
+  <div class="mobile-nav__top">
+    <div class="mobile-nav__header">
+      <a href="#!" class="logo"> 3legant<span class="logo__dot">.</span></a>
+      <button id="close-mobile-nav">
+        <img src="./img/icons/close.svg" alt="close" />
+      </button>
+    </div>
+    <form class="mobile-nav__search">
+      <img src="./img/icons/search.svg" alt="search" />
+      <input
+        class="mobile-nav__search-input"
+        type="text"
+        placeholder="Search"
+      />
+    </form>
+    <div class="mobile-nav__nav">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link">Home</a>
+        </li>
+        <li class="mobile-nav__item">
+          <button href="#!" class="mobile-nav__link">
+            Shop
+            <img src="./img/icons/chevron-down.svg" alt="down" />
+          </button>
+        </li>
+        <li class="mobile-nav__item">
+          <button href="#!" class="mobile-nav__link">
+            Product
+            <img src="./img/icons/chevron-down.svg" alt="down" />
+          </button>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mobile-nav__bottom">
+    <div class="mobile-nav__links">
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link">Cart</a>
+          <img src="./img/icons/cart.svg" alt="cart" />
+          <span class="nav__btn-count">2</span>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="#!" class="mobile-nav__link">Wishlist</a>
+          <img src="./img/icons/heart.svg" alt="cart" />
+          <span class="nav__btn-count">2</span>
+        </li>
+      </ul>
+    </div>
+    <div class="mobile-nav__singin">
+      <a href="#!" class="btn btn__wide">Sign In</a>
+    </div>
+    <div class="mobile-nav__socials">
+      <a href="#!"
+        ><img src="./img/socials-black/instagram.svg" alt="Social"
+      /></a>
+      <a href="#!"
+        ><img src="./img/socials-black/facebook.svg" alt="Social"
+      /></a>
+      <a href="#!"
+        ><img src="./img/socials-black/youtube.svg" alt="Social"
+      /></a>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-nav-fade"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector(".mobile-nav__search-input");
+
+    // Сбрасываем значение при клике вне input
+    document.addEventListener("click", function (event) {
+      // Проверяем, был ли клик вне input и формы поиска
+      if (!event.target.closest(".mobile-nav__search")) {
+        searchInput.value = ""; // Сбрасываем значение
+      }
+    });
+
+    // Дополнительно: сбрасываем при нажатии Escape
+    searchInput.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        searchInput.value = "";
+        searchInput.blur(); // Убираем фокус
+      }
+    });
+  });
+</script>

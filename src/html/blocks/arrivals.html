@@ -1,0 +1,36 @@
+<section class="arrivals">
+  <div class="container">
+    <div class="arrivals_row">
+      <div class="arrivals__title">
+        <h2 class="headline headline-4">New Arrivals</h2>
+      </div>
+      <div class="arrivals__dots">
+        <div class="dots">
+          <div class="dot dot--active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <div class="container-right">
+      <div class="arrivals__slider">
+        @@include('templates/arrials-swiper.html')
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll(".dot").forEach((dot) => {
+    dot.addEventListener("click", function () {
+      // Убираем активный класс у всех точек
+      document.querySelectorAll(".dot").forEach((d) => {
+        d.classList.remove("dot--active");
+      });
+      // Добавляем активный класс только нажатой точке
+      this.classList.add("dot--active");
+    });
+  });
+</script>
