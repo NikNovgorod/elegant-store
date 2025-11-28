@@ -1,0 +1,35 @@
+.arrivals {
+  padding: 48px 0;
+
+  @include mobile {
+    padding: 20px 0;
+  }
+}
+
+.arrivals_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 48px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+}
+.arrivals__title {
+}
+
+.headline-4 {
+}
+
+.arrivals__dots {
+}
+
+.container-right {
+}
+
+.arrivals__slider {
+  display: flex;
+  gap: 24px;
+}

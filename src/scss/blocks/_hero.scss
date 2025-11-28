@@ -1,0 +1,100 @@
+.hero {
+  height: 820px;
+  background-color: #ffc95c;
+  background-image: url("./../img/hero/bg.jpg");
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mediaBg() {
+    background-image: url("./../img/hero/bg@2x.jpg");
+  }
+
+  @include tablet {
+    height: 500px;
+  }
+
+  @include mobile {
+    height: auto;
+    padding-bottom: 390px;
+
+    background-image: url("./../img/hero/bg-mobile.jpg");
+
+    @include mediaBg() {
+      background-image: url("./../img/hero/bg-mobile@2x.jpg");
+    }
+  }
+}
+
+.hero__container {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding-left: calc(
+    (100% - var(--container-width)) / 2 + var(--container-width) / 2
+  );
+
+  padding-right: calc((100% - var(--container-width)) / 2);
+
+  @include tablet {
+    padding-right: var(--container-padding);
+  }
+
+  @include mobile {
+    padding: 40px var(--container-padding);
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+.hero__content {
+  color: #fff;
+}
+
+.hero__title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 105%;
+  letter-spacing: -0.04em;
+  color: #121212;
+
+  margin-bottom: 8px;
+
+  @include tablet {
+    font-size: 60px;
+  }
+
+  @include mobile {
+    font-size: 40px;
+  }
+}
+
+.amazing {
+  color: var(--blue);
+}
+
+.hero__desc {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 160%;
+  color: #121212;
+
+  margin-bottom: 28px;
+
+  @include mobile {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+.hero__link {
+  font-family: var(--font-family);
+}

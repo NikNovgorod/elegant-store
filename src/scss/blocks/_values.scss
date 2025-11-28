@@ -1,0 +1,80 @@
+.values {
+  margin-bottom: 40px;
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include mobile {
+    margin-bottom: 5px;
+  }
+}
+
+.benefits-container {
+  display: flex;
+  justify-content: space-evenly; /* центрирует карточки */
+  flex-wrap: wrap;
+  gap: 24px;
+
+  & > * {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  @include tablet {
+    gap: 20px;
+  }
+
+  @include mobile {
+    gap: 15px;
+  }
+}
+
+.benefit-card {
+  width: 200px;
+  flex-shrink: 0; /* запрещает сжатие */
+
+  background: var(--neutral-02-1000);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e9ecef;
+
+  @include mobile {
+    text-align: center;
+    padding: 10px 5px;
+  }
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: #2c5aa0;
+
+  @include mobile {
+    margin-bottom: 5px;
+  }
+}
+
+.benefit-title {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--neutral-07-1000);
+}
+
+.benefit-description {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 171%;
+  color: var(--neutral-04-1000);
+}

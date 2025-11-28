@@ -1,0 +1,36 @@
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    background-color: var(--neutral-04-1000);
+  }
+
+  &--active {
+    border: 2px solid var(--neutral-07-1000);
+    &::before {
+      background-color: var(--neutral-07-1000);
+    }
+  }
+}

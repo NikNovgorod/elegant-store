@@ -1,0 +1,16 @@
+.logo {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  text-align: center;
+  color: var(--brand-color);
+
+  &__dot {
+    color: var(--neutral-07-1000);
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
